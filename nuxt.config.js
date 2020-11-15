@@ -39,7 +39,7 @@ export default {
         // https://go.nuxtjs.dev/axios
         '@nuxtjs/axios',
         // https://auth.nuxtjs.org/
-        '@nuxtjs/auth',
+        // '@nuxtjs/auth',
     ],
 
     // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -53,38 +53,41 @@ export default {
     },
 
 
-    // https://auth.nuxtjs.org/schemes/local.html#options
-    // 设置auth模块方案
-    auth: {
-        strategies: {
-            // 内置方案
-            // local: {
-            //     endpoints: {
-            //         login: { url: '/api/index/login', method: 'post' },
-            //     },
-            //     tokenRequired: false,
-            //     tokenType: false
-            // }
+    // // https://auth.nuxtjs.org/schemes/local.html#options
+    // // 设置auth模块方案
+    // auth: {
+    //     strategies: {
+    //         // 内置方案
+    //         // local: {
+    //         //     endpoints: {
+    //         //         login: { url: '/api/index/login', method: 'post' },
+    //         //     },
+    //         //     tokenRequired: false,
+    //         //     tokenType: false
+    //         // }
 
-            // 自定义方案
-            // https://auth.nuxtjs.org/guide/scheme.html#creating-your-own-scheme
-            custom: {
-                _scheme: '~/schemes/customScheme',
-                endpoints: {
-                    // 可以不指明url，到调用该方案登录时指明，这个对象基本就是axios的请求选项
-                    login: { method: 'post' },
-                    logout: { url: '/api/index/logout', method: 'get' },
-                    // 提供获取用户信息配置，可以从this.$auth.user拿到用户信息了，它的值是接口返回的propertyName指定的键值
-                    // user: { url: '/api/index/status', method: 'get', propertyName: 'info' },
-                },
-                // tokenRequired: false,
-                // tokenType: false
-            }
-        },
-    },
+    //         // // 自定义方案
+    //         // // https://auth.nuxtjs.org/guide/scheme.html#creating-your-own-scheme
+    //         // custom: {
+    //         //     _scheme: '~/schemes/customScheme',
+    //         //     endpoints: {
+    //         //         // 可以不指明url，到调用该方案登录时指明，这个对象基本就是axios的请求选项
+    //         //         login: { method: 'post' },
+    //         //         logout: { url: '/api/index/logout', method: 'get' },
+    //         //         // 提供获取用户信息配置，可以从this.$auth.user拿到用户信息了，它的值是接口返回的propertyName指定的键值
+    //         //         // user: { url: '/api/index/status', method: 'get', propertyName: 'info' },
+    //         //     },
+    //         //     // tokenRequired: false,
+    //         //     // tokenType: false
+    //         // }
+    //     },
+    // },
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {
-        transpile: [/^element-ui/, '@nuxtjs/auth'],
+        transpile: [
+            /^element-ui/,
+            // '@nuxtjs/auth',
+        ],
     },
 }
